@@ -1,0 +1,39 @@
+@using Interxarifado.Models
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Novo Produto";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Estoque/IndexEstoque">Produtos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Novo Produto</li>
+    </ol>
+</div>
+
+<form action="/Estoque/CreateEstoque" method="POST">
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome"/>
+    </div>
+
+    <div>
+        <label>Descrição</label>
+        <textarea name="descricao" class="form-control"></textarea>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label>Quantida em Estoque</label>
+            <input type="number" class="form-control" name="qtdEstoque"/>
+        </div>
+
+        <div class="col-6">
+            <label>Status</label>
+            <input type="number" class="form-control" name="status"/>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

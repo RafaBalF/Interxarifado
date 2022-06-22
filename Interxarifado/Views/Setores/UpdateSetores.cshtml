@@ -1,0 +1,41 @@
+@using Interxarifado.Models
+@model Setores
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Alterar Setor";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Setores/IndexSetores">Setores</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Alterar Setor</li>
+    </ol>
+</div>
+
+<form action="/Setores/UpdateSetores/@Model.IdSetor" method="POST">
+    <div>
+         <input type="hidden" name="IdSetor" value="@Model.IdSetor" />
+    </div>
+    <div>
+        <label>Setor</label>
+        <input type="text" class="form-control" name="Setor"/>
+    </div>
+    <div>
+        <label>Responsavel Setor</label>
+        <input type="number" class="form-control" name="Id"/>
+    </div>
+
+    @* <div>
+        <label>Nome do Responsavel</label>
+        <select name="id" class="form-control">
+            @foreach(var responsavel in ViewBag.Responsavel)
+            {
+            <option value="@responsavel.id">@responsavel.nome</option>
+            }
+        </select>
+    </div>     *@
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

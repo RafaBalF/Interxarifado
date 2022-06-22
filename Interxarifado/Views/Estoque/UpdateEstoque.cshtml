@@ -1,0 +1,44 @@
+@using Interxarifado.Models
+@model Estoque
+
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Atualiza Produto";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Estoque/IndexEstoque">Produtos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Atualiza Produto</li>
+    </ol>
+</div>
+
+<form action="/Estoque/UpdateEstoque/@Model.idProduto" method="POST">
+    <div>
+         <input type="hidden" name="idProduto" value="@Model.idProduto" />
+    </div>
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome" value="@Model.nome"/>
+    </div>
+
+    <div>
+        <label>Descrição</label>
+        <textarea name="descricao" class="form-control">@Model.descricao</textarea>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <label>Quantidade em Estoque</label>
+            <input -class="form-control" asp-for="qtdEstoque"/>
+        </div>
+
+        <div class="col-6">
+            <label>Status</label>
+            <input class="form-control" asp-for="status"/>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

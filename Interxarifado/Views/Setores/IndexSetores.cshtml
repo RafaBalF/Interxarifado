@@ -1,0 +1,48 @@
+@using Interxarifado.Models
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Setores";
+}
+
+<div class="row">
+    <div class="col-2">
+        <ul class="list-group">
+            <li class="list-group-item "><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
+            <li class="list-group-item "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
+            <li class="list-group-item "><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
+            <li class="list-group-item "><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
+            <li class="list-group-item active" aria-current="true"><a href="/Setores/IndexSetores">Todos Setores</a></li>
+        </ul>   
+    </div>
+    @foreach(var responsavel in ViewBag.ResponsavelSetor)
+            {
+            <li class="list-group-item">
+                <a href="/Setores/FilterByResponsavel/@responsavel.id">@responsavel.nome</a>
+            </li>
+            }
+    <div class="col-10">
+
+        <table class="table table-hover">
+            <tr>
+                <th>Setor</th>
+                <th>ID Setor</th>
+                <th>ID Responsavel</th>
+            </tr>
+            @foreach (Setores p in Model)
+            {
+                <tr>
+                    <td>@p.Setor</td>
+                    <td>@p.IdSetor</td> 
+                    <td>@p.Id</td>
+                    <td>
+                        <a href="/Setores/DeleteSetores?idSetor=@p.IdSetor">Apagar</a>
+                        <a href="/Setores/UpdateSetores?idSetor=@p.IdSetor">Editar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+        <a href="/Setores/CreateSetores" class="btn btn-primary">Adicionar</a>
+
+    </div>
+</div>

@@ -1,0 +1,64 @@
+@using Interxarifado.Models
+@model Funcionario
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Alterar Funcionario";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Funcionario/IndexFuncionario">Funcionarios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Alterar Funcionario</li>
+    </ol>
+</div>
+
+<form action="/Funcionario/UpdateFuncionario/@Model.id" method="POST">
+    <div>
+         <input type="hidden" name="id" value="@Model.id" />
+    </div>
+
+
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome"/>
+    </div>
+
+    <div>
+        <label>CPF</label>
+        <input type="text" name="cpf" class="form-control"/>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="text" name="email" class="form-control"/>
+    </div>
+    <div>
+        <label>Senha</label>
+        <input type="text" name="senha" class="form-control"/>
+    </div>
+    <div>
+        <label>Salario</label>
+        <input type="number" name="cpf" class="form-control"/>
+    </div>
+    <div>
+        <label>Data de Inicio do Contrato</label>
+        <input type="text" name="dataInicioContr" class="form-control"/>
+    </div>
+    <div>
+        <label>Data do Final do Contrato</label>
+        <input type="text" name="dataFimContr" class="form-control"/>
+    </div>
+     <div>
+        <label>Setor</label>
+        <select name="idSetor" class="form-control">
+            @* @foreach(var setor in ViewBag.Setores)
+            {
+            <option value="@setor.idSetor">@setor.setor</option>
+            } *@
+        </select>
+    </div>     
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

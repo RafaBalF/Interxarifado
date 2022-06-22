@@ -1,0 +1,52 @@
+@using Interxarifado.Models
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Novo Funcionario";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Estoque/IndexEstoque">Todos Produtos</a></li>
+        <li class="breadcrumb-item"><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Novo Funcionario</li>
+    </ol>
+</div>
+
+<form action="/Funcionario/CreateFuncionario" method="POST">
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="Nome"/>
+    </div>
+
+    <div>
+        <label>CPF</label>
+        <input type="text" name="CPF" class="form-control"/>
+    </div>
+    <div>
+        <label>Salario</label>
+        <input type="number" name="Salario" class="form-control"/>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="text" name="Email" class="form-control"/>
+    </div>
+    <div>
+        <label>Senha</label>
+        <input type="text" name="Senha" class="form-control"/>
+    </div>
+    <div>
+        <label>Data de Inicio de Contrato</label>
+        <input type="text" name="DataInicioContr" class="form-control"/>
+    </div>
+    <div>
+        <label>Data de Fim de Contrato</label>
+        <input type="text" name="DataFimContr" class="form-control"/>
+    </div>
+    <div>
+        <label>Setor ID</label>
+        <input type="number" name="IdSetor" class="form-control"/>
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

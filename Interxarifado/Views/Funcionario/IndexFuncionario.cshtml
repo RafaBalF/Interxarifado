@@ -1,0 +1,59 @@
+@using Interxarifado.Models
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Todos Funcionarios";
+}
+
+<div class="row">
+    <div class="col-2">
+        <ul class="list-group">
+            <li class="list-group-item " ><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
+            <li class="list-group-item "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
+            <li class="list-group-item active" aria-current="true"><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
+            <li class="list-group-item " ><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
+            <li class="list-group-item " ><a href="/Setores/IndexSetores">Todos Setores</a></li>
+       
+            @* @foreach(var setor in ViewBag.Setores)
+            {
+            <li class="list-group-item">
+                <a href="/Funcionario/Filter/@setor.idSetor">@setor.nome</a>
+            </li>
+            } *@
+        </ul>
+    </div>
+    <div class="col-10">
+
+        <table class="table table-hover">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Salario</th>
+                <th>Data de Inicio do Contrato</th>
+                <th>Data do Final do Contrato</th>
+                <th>&nbsp;</th>
+                <th>ID Setor</th>
+                <th>&nbsp;</th>
+            </tr>
+            @foreach (Funcionario p in Model)
+            {
+                <tr>
+                    <td>@p.nome</td>
+                    <td>@p.cpf</td>
+                    <td>@p.email</td>
+                    <td>@p.salario</td>
+                    <td>@p.dataInicioContr</td>
+                    <td>@p.dataFimContr</td>
+                    <td>@p.idSetor</td>
+                    <td>
+                        <a href="/Funcionario/DeleteFuncionario?id=@p.id">Apagar</a>
+                        <a href="/Funcionario/UpdateFuncionario?id=@p.id">Editar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+        <a href="/Funcionario/CreateFuncionario" class="btn btn-primary">Adicionar</a>
+
+    </div>
+</div>

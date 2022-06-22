@@ -1,0 +1,50 @@
+@using Interxarifado.Models
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Requisições";
+}
+
+<div class="row">
+    <div class="col-2">
+        <ul class="list-group">
+            <li class="list-group-item "><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
+            <li class="list-group-item "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
+            <li class="list-group-item "><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
+            <li class="list-group-item active" aria-current="true"><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
+            <li class="list-group-item "><a href="/Setores/IndexSetores">Todos Setores</a></li>
+    
+            @* @foreach(var setor in ViewBag.Setores)
+            {
+            <li class="list-group-item">
+                <a href="/Requisicao/FilterBySetores/@setor.IdSetor">@setor.setor</a>
+            </li>
+            } *@
+        </ul>
+    </div>
+    <div class="col-10">
+
+        <table class="table table-hover">
+            <tr>
+                <th>ID da Requisição</th>
+                <th>Data da Requisicao</th>
+                <th>Setor Requisitante</th>
+            </tr>
+            @foreach (Requisicao p in Model)
+            {
+                <tr>
+                    <td>@p.idRequisicao</td>
+                    <td>@p.dataRequisicao</td>
+                    <td>@p.setorRequisitante</td>
+                    <td>
+                    <a href="/Requisicao/DeleteRequisicao?idRequisicao=@p.idRequisicao">Apagar</a>
+                    <a href="/Requisicao/UpdateRequisicao/@p.idRequisicao">Editar</a>
+                </td>
+                </tr>
+                
+            }
+        </table>
+
+        <a href="/Requisicao/CreateRequisicao" class="btn btn-primary">Adicionar</a>
+
+    </div>
+</div>

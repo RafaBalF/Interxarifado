@@ -1,0 +1,45 @@
+@using Interxarifado.Models
+@model ProdutoRequisicao
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Alterar Quantidade Entregue";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/ProdRequi/IndexProdutoRequi">Requisicao</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Alterar Quantidade Entregue</li>
+    </ol>
+</div>
+
+<form action="/ProdRequi/UpdateProdutoRequi/@Model.idPreq" method="POST">
+    <div>
+         <input type="hidden" name="idPreq" value="@Model.idPreq" />
+    </div>
+    <div>
+        <input type="hidden" class="form-control" name="idProduto" value="@Model.idProduto"/>
+    </div>
+
+    <div>
+        <input type="hidden" class="form-control" name="produtoRequisitado" value="@Model.produtoRequisitado"/>
+    </div>
+    
+    <div>
+        <input type="hidden" class="form-control" name="qtdRequisitada" value="@Model.qtdRequisitada"/>
+    </div>
+    <div>
+        <input type="hidden" class="form-control" name="dataRequisicao"/>
+    </div>
+    <div>
+        <input type="hidden" class="form-control" name="setorRequisitante"/>
+    </div>
+    <div>
+        <label>Quantidade Entregue</label>
+        <input type="number" class="form-control" name="qtdEntregue" value="@Model.qtdEntregue"/>
+    </div>
+
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

@@ -1,0 +1,14 @@
+using Interxarifado.Models;
+
+namespace Interxarifado.Repositories
+{
+    public interface IRequisicaoRepository
+    {
+        void CreateRequisicao(Requisicao requisicoes);
+        List<Requisicao> ReadRequisicao();
+        Requisicao ReadRequisicao(int idRequisicao);
+        List<Requisicao> ReadBySetor(int idRequisicao);
+        void UpdateRequisicao(int idRequisicao, Requisicao requisicoes);
+        void DeleteRequisicao(int idRequisicao);
+    }
+}

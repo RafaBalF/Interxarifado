@@ -1,0 +1,42 @@
+@using Interxarifado.Models
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Produtos Requisitados";
+}
+
+<div class="row">
+    <div class="col-2">
+        <ul class="list-group list-group-flush">
+            <a href="/Requisicao/IndexRequisicao">Todas Requisições</a>
+        </ul>
+    </div>
+    <div class="col-10">
+
+        <table class="table table-hover">
+            <tr>
+                <th>ID da Requisição</th>
+                <th>ID do Produto</th>
+                <th>Produto Requisitado</th>
+                <th>Quantidade Requisitada</th>
+                <th>Quantidade Entregue</th>
+            </tr>
+            @foreach (ProdutoRequisicao p in Model)
+            {
+                <tr>
+                    <td>@p.idRequisicao</td>
+                    <td>@p.idProduto</td>
+                    <td>@p.produtoRequisitado</td>
+                    <td>@p.qtdRequisitada</td>
+                    <td>@p.qtdEntregue</td>
+                    <td>
+                    <a href="/ProdRequi/UpdateProdutoRequi?idPreq=@p.idPreq">Editar</a>
+                </td>
+                </tr>
+                
+            }
+        </table>
+
+        <a href="/Requisicao/CreateRequisicao" class="btn btn-primary">Adicionar</a>
+
+    </div>
+</div>

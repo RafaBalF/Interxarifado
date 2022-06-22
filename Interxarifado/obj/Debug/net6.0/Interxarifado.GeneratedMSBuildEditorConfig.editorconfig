@@ -1,0 +1,104 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Interxarifado
+build_property.RootNamespace = Interxarifado
+build_property.ProjectDir = C:\Interxarifado\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Interxarifado
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Interxarifado/Views/Estoque/CreateEstoque.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxDcmVhdGVFc3RvcXVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Estoque/IndexEstoque.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxJbmRleEVzdG9xdWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Estoque/UpdateEstoque.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxVcGRhdGVFc3RvcXVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Funcionario/CreateFuncionario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cQ3JlYXRlRnVuY2lvbmFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Funcionario/IndexFuncionario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cSW5kZXhGdW5jaW9uYXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Funcionario/UpdateFuncionario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9cVXBkYXRlRnVuY2lvbmFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Login/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/ProdutoRequisicao/CreateProdutoRequi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1JlcXVpc2ljYW9cQ3JlYXRlUHJvZHV0b1JlcXVpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/ProdutoRequisicao/IndexProdutoRequi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1JlcXVpc2ljYW9cSW5kZXhQcm9kdXRvUmVxdWkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/ProdutoRequisicao/UpdateProdutoRequi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1JlcXVpc2ljYW9cVXBkYXRlUHJvZHV0b1JlcXVpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Requisicao/CreateRequisicao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlzaWNhb1xDcmVhdGVSZXF1aXNpY2FvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Requisicao/IndexRequisicao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlzaWNhb1xJbmRleFJlcXVpc2ljYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Requisicao/UpdateRequisicao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlzaWNhb1xVcGRhdGVSZXF1aXNpY2FvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Responsavel/CreateResponsavel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzcG9uc2F2ZWxcQ3JlYXRlUmVzcG9uc2F2ZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Responsavel/IndexResponsavel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzcG9uc2F2ZWxcSW5kZXhSZXNwb25zYXZlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Responsavel/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzcG9uc2F2ZWxcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Responsavel/UpdateResponsavel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzcG9uc2F2ZWxcVXBkYXRlUmVzcG9uc2F2ZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Setores/CreateSetores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0b3Jlc1xDcmVhdGVTZXRvcmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Setores/IndexSetores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0b3Jlc1xJbmRleFNldG9yZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Interxarifado/Views/Setores/UpdateSetores.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0b3Jlc1xVcGRhdGVTZXRvcmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

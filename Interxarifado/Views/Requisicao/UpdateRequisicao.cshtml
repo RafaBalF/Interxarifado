@@ -1,0 +1,41 @@
+@using Interxarifado.Models
+@model Requisicao
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Alterar Requisicao";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Requisicao/IndexRequisicao">Requisicao</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Alterar Requisicao</li>
+    </ol>
+</div>
+
+<form action="/Requisicao/UpdateRequisicao/@Model.idRequisicao" method="POST">
+    <div>
+         <input type="hidden" name="idRequisicao" value="@Model.idRequisicao" />
+    </div>
+    <div>
+        <label>Data da Requisicao</label>
+        <input type="text" class="form-control" name="dataRequisicao"/>
+    </div>
+    <div>
+        <label>ID Setor Requisitante</label>
+        <input type="number" class="form-control" name="setorRequisitante"/>
+    </div>
+
+    @* <div>
+        <label>Nome do Responsavel</label>
+        <select name="id" class="form-control">
+            @foreach(var responsavel in ViewBag.Responsavel)
+            {
+            <option value="@responsavel.id">@responsavel.nome</option>
+            }
+        </select>
+    </div>     *@
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

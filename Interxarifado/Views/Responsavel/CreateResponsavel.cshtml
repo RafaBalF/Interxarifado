@@ -1,0 +1,44 @@
+@using Interxarifado.Models
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Novo Responsavel";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Responsavel/IndexResponsavel">Responsaveis</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Novo Responsavel</li>
+    </ol>
+</div>
+
+<form action="/Responsavel/CreateResponsavel" method="POST">
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="Nome"/>
+    </div>
+
+    <div>
+        <label>CPF</label>
+        <input type="text" name="CPF" class="form-control"/>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="text" name="Email" class="form-control"/>
+    </div>
+    <div>
+        <label>Senha</label>
+        <input type="text" name="Senha" class="form-control"/>
+    </div>
+    <div>
+        <label>Numero de Concurso</label>
+        <input type="number" class="form-control" name="NmrConcurso"/>
+    </div>
+    <div>
+        <label>Salario</label>
+        <input type="number" class="form-control" name="Salario"/>
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

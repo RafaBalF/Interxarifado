@@ -1,0 +1,27 @@
+@using Interxarifado.Models
+
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Nova Requisição";
+}
+
+<div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Requisicao/IndexRequisicao">Requisições</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nova Requisição</li>
+    </ol>
+</div>
+
+<form action="/Requisicao/CreateRequisicao" method="POST">
+    <div>
+        <label>Data da Requisição</label>
+        <input type="text" class="form-control" name="dataRequisicao"/>
+    </div>
+    
+    <div>
+        <label>Setor Requisitante</label>
+        <input type="number" class="form-control" name="setorRequisitante"/>
+    </div>
+    
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+</form>

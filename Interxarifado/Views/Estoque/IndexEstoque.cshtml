@@ -1,0 +1,46 @@
+@using Interxarifado.Models
+@{
+    Layout = "/Views/Layout.cshtml";
+    ViewBag.Title = "Produtos";
+}
+
+<div class="row">
+    <div class="col-2">
+        <ul class="list-group">
+            <li class="list-group-item active" aria-current="true"><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
+            <li class="list-group-item "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
+            <li class="list-group-item " ><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
+            <li class="list-group-item " ><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
+            <li class="list-group-item " ><a href="/Setores/IndexSetores">Todos Setores</a></li>
+        </ul>
+    </div>
+    <div class="col-10">
+
+        <table class="table table-hover">
+            <tr>
+                <th>Nome Produto</th>
+                <th>Descrição</th>
+                <th>Quantidade em Estoque</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            @foreach (Estoque p in Model)
+            {
+                <tr>
+                    <td>@p.nome</td>
+                    <td>@p.descricao</td>
+                    <td>@p.qtdEstoque</td>
+                    <td>@p.status</td>
+                    <td>
+                        <a href="/Estoque/DeleteEstoque?idProduto=@p.idProduto">Apagar</a>
+                        <a href="/Estoque/UpdateEstoque?idProduto=@p.idProduto">Editar</a>
+                    </td>
+                </tr>
+            }
+        </table>
+
+        <a href="/Estoque/CreateEstoque" class="btn btn-primary">Adicionar</a>
+
+    </div>
+</div>
