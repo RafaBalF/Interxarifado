@@ -100,12 +100,12 @@ namespace Interxarifado.Repositories
             }
         }
 
-        public List<Funcionario> ReadBySetor(int idSetor)
+        public List<Funcionario> ReadBySetores(int IdSetor)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connection;
-            cmd.CommandText = @"SELECT * FROM v_Funcionario WHERE idSetor = '@idSetor'";
-            cmd.Parameters.AddWithValue("@idSetor", idSetor);
+            cmd.CommandText = @"SELECT * FROM v_Funcionario WHERE idSetor = @IdSetor";
+            cmd.Parameters.AddWithValue("@IdSetor", IdSetor);
 
             SqlDataReader reader = cmd.ExecuteReader();
 

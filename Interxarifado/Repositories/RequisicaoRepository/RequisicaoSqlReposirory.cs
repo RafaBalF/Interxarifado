@@ -85,12 +85,12 @@ namespace Interxarifado.Repositories
             }
         }
 
-        public List<Requisicao> ReadBySetor(int IdSetor)
+        public List<Requisicao> ReadBySetores(int IdSetor)
         {
             try{
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connection;
-            cmd.CommandText = @"SELECT * FROM Requisicao WHERE setorRequisitante = '@IdSetor'";
+            cmd.CommandText = @"SELECT * FROM Requisicao WHERE setorRequisitante = @IdSetor";
             cmd.Parameters.AddWithValue("@IdSetor", IdSetor);
 
             SqlDataReader reader = cmd.ExecuteReader();
@@ -103,7 +103,7 @@ namespace Interxarifado.Repositories
                      new Requisicao
                     {
                         idRequisicao = (int)reader["idRequisicao"], 
-                        dataRequisicao = (string)reader["data"], 
+                        dataRequisicao = (string)reader["dataRequisicao"], 
                         setorRequisitante = (int)reader["setorRequisitante"],
                     }
                 );

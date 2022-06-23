@@ -13,12 +13,12 @@
             <li class="list-group-item " ><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
             <li class="list-group-item " ><a href="/Setores/IndexSetores">Todos Setores</a></li>
        
-            @* @foreach(var setor in ViewBag.Setores)
+            @foreach(var setor in ViewBag.Setores)
             {
             <li class="list-group-item">
-                <a href="/Funcionario/Filter/@setor.idSetor">@setor.nome</a>
+                <a href="/Funcionario/FilterBySetores/@setor.IdSetor">@setor.Setor</a>
             </li>
-            } *@
+            }
         </ul>
     </div>
     <div class="col-10">

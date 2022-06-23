@@ -23,12 +23,12 @@ namespace Interxarifado.Controllers
             List<Funcionario> funcionarios = repository.ReadFuncionario();
             return View(funcionarios);
         } 
-        // public ActionResult FilterBySetor(int id)
-        // {
-        //     ViewBag.Setores = setoresRepository.ReadSetores();
-        //     List<Funcionario> funcionarios = repository.ReadBySetor(id);
-        //     return View("IndexFuncionarios", funcionarios);
-        // }
+        public ActionResult FilterBySetores(int IdSetor)
+        {
+            ViewBag.Setores = setoresRepository.ReadSetores();
+            List<Funcionario> funcionarios = repository.ReadBySetores(IdSetor);
+            return View("IndexFuncionario", funcionarios);
+        }
 
         [HttpGet]
         public ActionResult CreateFuncionario()
