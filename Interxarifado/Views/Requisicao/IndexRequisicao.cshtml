@@ -7,6 +7,8 @@
 <div class="row">
     <div class="col-2">
         <ul class="list-group">
+            <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Login/Home">Pagina Inicial</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Login/Home">Pagina Inicial</a></li> 
             <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
             <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
             <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
@@ -15,17 +17,17 @@
         </ul>
     </div>
     
-    <div class="col-2">
+    @* <div class="col-2">
         <ul class="list-group">        
     
             @foreach(var setor in ViewBag.Setores)
             {
             <li class="list-group-item">
-                <a href="/Requisicao/FilterBySetores/@setor.IdSetor">@setor.Setor</a>
+                <a href="/Requisicao/FilterBySetor/@setor.IdSetor">@setor.Setor</a>
             </li>
             }
         </ul>
-    </div>
+    </div> *@
     <div class="col-10">
 
         <table class="table table-hover">

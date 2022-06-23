@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FATECRP_LAB02M24\\.nuget\\packages\\": {}
+    "C:\\Users\\rafae\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Interxarifado\\Interxarifado.csproj",
+      "projectUniqueName": "C:\\Interxarifado-main\\Interxarifado\\Interxarifado.csproj",
       "projectName": "Interxarifado",
-      "projectPath": "C:\\Interxarifado\\Interxarifado.csproj",
-      "packagesPath": "C:\\Users\\FATECRP_LAB02M24\\.nuget\\packages\\",
-      "outputPath": "C:\\Interxarifado\\obj\\",
+      "projectPath": "C:\\Interxarifado-main\\Interxarifado\\Interxarifado.csproj",
+      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+      "outputPath": "C:\\Interxarifado-main\\Interxarifado\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\FATECRP_LAB02M24\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

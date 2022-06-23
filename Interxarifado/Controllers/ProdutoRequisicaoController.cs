@@ -15,11 +15,21 @@ namespace Interxarifado.Controllers
         }
          public ActionResult IndexProdutoRequi()
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             ProdutoRequisicao preq = repository.ReadProdutoRequi();
             return View(preq);
         }
         public ActionResult FilterByRequisicao(int idRequisicao)
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             ViewBag.Requisicao = requisicaoRepository.ReadRequisicao();
             List<ProdutoRequisicao> preq = repository.ReadByRequisicao(idRequisicao);
             return View("IndexProdutoRequi", preq);
@@ -28,6 +38,11 @@ namespace Interxarifado.Controllers
         [HttpGet]
         public ActionResult CreateProdutoRequi()
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             ViewBag.Requisicao = requisicaoRepository.ReadRequisicao();
             return View();
         }
@@ -35,6 +50,11 @@ namespace Interxarifado.Controllers
         [HttpPost]
         public ActionResult CreateProdutoRequi(ProdutoRequisicao preq)
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             repository.CreateProdutoRequi(preq);
             ViewBag.Requisicao = requisicaoRepository.ReadRequisicao();
             return RedirectToAction("IndexProdutoRequi");

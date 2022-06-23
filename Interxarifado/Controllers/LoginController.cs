@@ -8,8 +8,12 @@ namespace Interxarifado.Controllers
     {
         public ActionResult Home()
         {
-             return View();
-
+             int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
+            return View();
         }
     }
 }

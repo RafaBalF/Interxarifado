@@ -15,8 +15,8 @@ namespace Interxarifado.Controllers
         public ActionResult Home()
         {
             
-                int? id = HttpContext.Session.GetInt32("id") as int?;
-                if(id == null)
+                int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
                 {
                     return RedirectToAction("Login", "Responsavel");
                 }
@@ -26,17 +26,24 @@ namespace Interxarifado.Controllers
 
         public ActionResult IndexResponsavel()
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             List<ResponsavelSetor> responsaveis = repository.ReadResponsavel();
             return View(responsaveis);
         }
         public ActionResult Login()
         {
+            
             return View();
         }
 
         [HttpPost]
         public ActionResult Login(ResponsavelViewModel model)
         {
+            
             var responsavel =repository.ReadResponsavel(model.email, model.senha);
 
             try
@@ -68,18 +75,25 @@ namespace Interxarifado.Controllers
         [HttpGet]
         public ActionResult CreateResponsavel()
         {
+           
             return View();
         }
 
         [HttpPost]
         public ActionResult CreateResponsavel(ResponsavelSetor responsavel)
         {
+            
             repository.CreateResponsavel(responsavel);
             return RedirectToAction("IndexResponsavel");
         }
 
         public ActionResult DeleteResponsavel(int id)
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             repository.DeleteResponsavel(id);
             return RedirectToAction("IndexResponsavel");
         }
@@ -87,6 +101,11 @@ namespace Interxarifado.Controllers
         [HttpGet]
         public ActionResult UpdateResponsavel(int id)
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             var responsavel = repository.ReadResponsavel(id);
             return View(responsavel);
         }
@@ -94,6 +113,11 @@ namespace Interxarifado.Controllers
         [HttpPost]
         public ActionResult UpdateResponsavel(int id, ResponsavelSetor responsavel)
         {
+            int? idzz = HttpContext.Session.GetInt32("id") as int?;
+                if(idzz == null)
+                {
+                    return RedirectToAction("Login", "Responsavel");
+                }
             repository.UpdateResponsavel(id, responsavel);
             return RedirectToAction("IndexResponsavel");
         } 
