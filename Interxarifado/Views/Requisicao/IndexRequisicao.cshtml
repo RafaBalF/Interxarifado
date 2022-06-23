@@ -7,11 +7,16 @@
 <div class="row">
     <div class="col-2">
         <ul class="list-group">
-            <li class="list-group-item "><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
-            <li class="list-group-item "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
-            <li class="list-group-item "><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
-            <li class="list-group-item active" aria-current="true"><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
+            <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark "><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark active" aria-current="true"><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
             <li class="list-group-item "><a href="/Setores/IndexSetores">Todos Setores</a></li>
+        </ul>
+    </div>
+    
+    <div class="col-2">
+        <ul class="list-group">        
     
             @foreach(var setor in ViewBag.Setores)
             {

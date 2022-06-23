@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\Interxarifado\\Interxarifado.csproj",
         "projectName": "Interxarifado",
         "projectPath": "C:\\Interxarifado\\Interxarifado.csproj",
-        "packagesPath": "C:\\Users\\FATECRP_LAB02_M20\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\FATECRP_LAB02M24\\.nuget\\packages\\",
         "outputPath": "C:\\Interxarifado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FATECRP_LAB02_M20\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\FATECRP_LAB02M24\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,7 +7,7 @@ namespace Interxarifado.Repositories
         void CreateRequisicao(Requisicao requisicoes);
         List<Requisicao> ReadRequisicao();
         Requisicao ReadRequisicao(int idRequisicao);
-        List<Requisicao> ReadBySetores(int IdSetor);
+        List<Requisicao> ReadBySetor(int idRequisicao);
         void UpdateRequisicao(int idRequisicao, Requisicao requisicoes);
         void DeleteRequisicao(int idRequisicao);
     }

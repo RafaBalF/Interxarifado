@@ -22,10 +22,10 @@ namespace Interxarifado.Controllers
             List<Requisicao> requisicoes = repository.ReadRequisicao();
             return View(requisicoes);
         }
-        public ActionResult FilterBySetores(int IdSetor)
+        public ActionResult FilterBySetor(int idRequisicao)
         {
             ViewBag.Setores = setoresRepository.ReadSetores();
-            List<Requisicao> requisicoes = repository.ReadBySetores(IdSetor);
+            List<Requisicao> requisicoes = repository.ReadBySetor(idRequisicao);
             return View("IndexRequisicao", requisicoes);
         }
 

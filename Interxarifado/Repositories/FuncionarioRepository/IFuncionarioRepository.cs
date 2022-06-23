@@ -6,7 +6,7 @@ namespace Interxarifado.Repositories
     {
         void CreateFuncionario(Funcionario funcionario);
         List<Funcionario> ReadFuncionario();
-        List<Funcionario> ReadBySetores(int IdSetor);
+        List<Funcionario> ReadBySetor(int idSetor);
         Funcionario ReadFuncionario(int id);
         void UpdateFuncionario(int id, Funcionario funcionario);
         void DeleteFuncionario(int id);

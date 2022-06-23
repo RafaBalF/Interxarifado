@@ -32,7 +32,7 @@ namespace Interxarifado.Repositories
             }
         }
 
-        public List<ProdutoRequisicao> ReadProdutoRequi()
+        public ProdutoRequisicao ReadProdutoRequi()
         {
             try
             {
@@ -44,21 +44,23 @@ namespace Interxarifado.Repositories
 
                 List<ProdutoRequisicao> lista = new List<ProdutoRequisicao>();
 
-                while (reader.Read())
+                 if (reader.Read())
                 {
-                    lista.Add(
+                    
                         new ProdutoRequisicao
                         {
-                            idRequisicao = (int)reader["idPreq"],
+                            idPreq =  (int)reader["idPreq"],
+                            idRequisicao = (int)reader["idRequisicao"],
                             idProduto = (int)reader["idProduto"],
                             produtoRequisitado = (string)reader["produtoRequisitado"],
                             qtdRequisitada = (int)reader["qtdRequisitada"],
                             qtdEntregue = (int)reader["qtdEntregue"],
-                        }
-                    );
+                        };
+                    
 
                 }
-            return lista;
+                return null;
+    
             }    
             catch(Exception ex) 
             {
@@ -72,30 +74,36 @@ namespace Interxarifado.Repositories
 
         }
 
-        public ProdutoRequisicao ReadProdutoRequi(int idPreq)
+        public List<ProdutoRequisicao> ReadByRequisicao(int idRequisicao)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = connection;
-                cmd.CommandText = @"SELECT * FROM ProdutosRequisitados WHERE idPreq = @idPreq";
-                cmd.Parameters.AddWithValue("@idRequisicao", idPreq);
+                cmd.CommandText = @"SELECT * FROM ProdutosRequisitados WHERE idRequisicao = @idRequisicao";
+                cmd.Parameters.AddWithValue("@idRequisicao", idRequisicao);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read())
+                List<ProdutoRequisicao> lista = new List<ProdutoRequisicao>();
+
+                while (reader.Read())
                 {
-                    return new ProdutoRequisicao
-                    {
-                        idRequisicao = (int)reader["idPreq"],
+                    lista.Add(
+                        new ProdutoRequisicao
+                        {
+                    
+                        idPreq =  (int)reader["idPreq"],
+                        idRequisicao = (int)reader["idRequisicao"],
                         idProduto = (int)reader["idProduto"],
                         produtoRequisitado = (string)reader["produtoRequisitado"],
                         qtdRequisitada = (int)reader["qtdRequisitada"],
                         qtdEntregue = (int)reader["qtdEntregue"],
-                    };
+                        }
+                    );
 
                 }
-            return null;
+            return lista;
             }    
             catch(Exception ex) 
             {

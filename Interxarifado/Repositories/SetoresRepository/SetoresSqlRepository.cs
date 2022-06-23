@@ -134,7 +134,7 @@ namespace Interxarifado.Repositories
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = connection;
-                cmd.CommandText = @"SELECT * FROM Setores WHERE idSetor = @IdSetor";
+                cmd.CommandText = @"SELECT * FROM Setores WHERE IdSetor = @IdSetor";
 
                 cmd.Parameters.AddWithValue("@IdSetor", IdSetor);
 

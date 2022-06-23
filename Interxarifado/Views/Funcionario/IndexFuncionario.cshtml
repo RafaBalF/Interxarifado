@@ -7,18 +7,18 @@
 <div class="row">
     <div class="col-2">
         <ul class="list-group">
-            <li class="list-group-item " ><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
-            <li class="list-group-item "><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
-            <li class="list-group-item active" aria-current="true"><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
-            <li class="list-group-item " ><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
-            <li class="list-group-item " ><a href="/Setores/IndexSetores">Todos Setores</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark" ><a href="/Estoque/IndexEstoque">Todos Produtos</a></li> 
+            <li class="list-group-item list-group-item-action list-group-item-dark"><a href="/Responsavel/IndexResponsavel">Todos Responsaveis</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark active" aria-current="true"><a href="/Funcionario/IndexFuncionario">Todos Funcionarios</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark" ><a href="/Requisicao/IndexRequisicao">Todas Requisições</a></li>
+            <li class="list-group-item list-group-item-action list-group-item-dark " ><a href="/Setores/IndexSetores">Todos Setores</a></li>
        
-            @foreach(var setor in ViewBag.Setores)
+            @* @foreach(var setor in ViewBag.Setores)
             {
             <li class="list-group-item">
-                <a href="/Funcionario/FilterBySetores/@setor.IdSetor">@setor.Setor</a>
+                <a href="/Funcionario/Filter/@setor.idSetor">@setor.nome</a>
             </li>
-            }
+            } *@
         </ul>
     </div>
     <div class="col-10">

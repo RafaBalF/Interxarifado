@@ -11,28 +11,5 @@ namespace Interxarifado.Controllers
              return RedirectToAction("Login","Responsavel");
 
         }
-        // public ActionResult Teste()
-        // {
-        //     try
-        //     {
-        //         int? id = HttpContext.Session.GetInt32("id") as int?;
-        //         if(id == null)
-        //         {
-        //             return RedirectToAction("Login", "Responsavel");
-        //         }
-        //          return View();
-                
-        //     }
-        //     catch
-        //     {
-        //         return RedirectToAction("Home","Login");
-
-        //     }
-        //     finally
-        //     {
-        //         Dispose();
-
-        //     }        
-        // }
     }
 }

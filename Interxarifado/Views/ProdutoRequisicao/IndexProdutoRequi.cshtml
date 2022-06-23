@@ -1,4 +1,6 @@
 @using Interxarifado.Models
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "/Views/Layout.cshtml";
     ViewBag.Title = "Produtos Requisitados";
@@ -7,10 +9,20 @@
 <div class="row">
     <div class="col-2">
         <ul class="list-group list-group-flush">
-            <a href="/Requisicao/IndexRequisicao">Todas Requisições</a>
+            <a href="/ProdutoRequisicao/IndexProdutoRequi">Todas Requisições</a>
         </ul>
     </div>
     <div class="col-10">
+    <div class="col-2">
+        <ul class="list-group">        
+    
+           @foreach(var requisicao in ViewBag.Requisicao)
+        {
+            <li class="list-group-item list-group-item-action list-group-item-info"><a href="/ProdutoRequisicao/FilterByRequisicao/@requisicao.idRequisicao">@requisicao.idRequisicao</a></li>
+        }
+    
+        </ul>
+    </div>
 
         <table class="table table-hover">
             <tr>
@@ -36,7 +48,7 @@
             }
         </table>
 
-        <a href="/Requisicao/CreateRequisicao" class="btn btn-primary">Adicionar</a>
+        <a href="/ProdutoRequisicao/CreateProdutoRequi" class="btn btn-primary">Adicionar</a>
 
     </div>
 </div>
